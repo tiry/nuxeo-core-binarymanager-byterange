@@ -8,5 +8,20 @@ This service is supposed to be a temporary soluton until we reintegrate this dir
 
 ## Build and usage
 
-XXX
+### Build + Tests
+
+	mvn clean install
+
+### Deploying
+
+You first need to deploy the plugin inside your Nuxeo server.
+
+	cp target/nuxeo-core-binarymanager-byterange-X.Y-Z.jar into nxserver/bundles
+
+## WIP
+
+ - [x] Initial service
+ - [x] S3 and LocalFS implementation
+ - [ ] S3 unit tests 
+ - [ ] Make service pluggable to contribue providers from the outside
 
