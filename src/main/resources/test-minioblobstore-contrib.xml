@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.core.test.blobmanager2">
+  <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">    
+
+    <blobprovider name="test">
+      <class>org.nuxeo.ecm.core.storage.sql.S3BinaryManager</class>
+      <property name="endpoint">http://127.0.0.1:9000</property>
+      <property name="awsid">57HHE9NCXNLBOBKSPEXU</property>
+      <property name="awssecret">sMSXC8x+++RD+H6M72fhANPFNr+BWbsOZa07naVe</property>
+      <property name="--awstoken">${nuxeo.s3storage.transient.awstoken}</property>
+      <property name="bucket">test</property>
+      <property name="bucket_prefix"></property>
+    </blobprovider>
+
+  </extension>
+</component>

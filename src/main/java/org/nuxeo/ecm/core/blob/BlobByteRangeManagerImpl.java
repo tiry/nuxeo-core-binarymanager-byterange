@@ -44,7 +44,7 @@ public class BlobByteRangeManagerImpl extends DefaultComponent implements BlobBy
 
 		// Build a byterange request
 		GetObjectRequest request = new GetObjectRequest(bucketName, blob.getDigest());
-		request.setRange(offset, offset + length);
+		request.setRange(offset, offset + length-1);
 
 		return new AbstractBlob() {
 
