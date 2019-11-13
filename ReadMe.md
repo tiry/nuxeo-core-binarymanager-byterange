@@ -64,6 +64,6 @@ A Helper class is also provided in order to avoid direct dependency on Nuxeo run
  - [x] Initial service
  - [x] S3 and LocalFS implementation
  - [x] S3 unit tests 
- - [ ] Automate MiniIO deployment and configuration for tests
- - [ ] Make service pluggable to contribue providers from the outside
+ - [x] Automate MiniIO deployment and configuration for tests
+ - [ ] Make service pluggable to contribute providers from the outside
 

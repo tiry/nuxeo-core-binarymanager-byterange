@@ -22,7 +22,6 @@ public class CoreFeatureMinioS3BlobStore extends CoreFeature {
 			super(feature);
 		}
 
-
 		@Override
 		public URL getBlobManagerContrib(FeaturesRunner runner) {
 			String bundleName = "org.nuxeo.ecm.core.nuxeo-core-binarymanager-byterange";

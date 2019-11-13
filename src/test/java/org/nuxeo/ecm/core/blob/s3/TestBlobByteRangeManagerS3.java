@@ -15,6 +15,7 @@ import org.nuxeo.ecm.core.api.impl.blob.StringBlob;
 import org.nuxeo.ecm.core.blob.BlobByteRangeManager;
 import org.nuxeo.ecm.core.blob.BlobManager;
 import org.nuxeo.ecm.core.blob.BlobProvider;
+import org.nuxeo.ecm.core.blob.s3.minio.MinioDockerFeature;
 import org.nuxeo.ecm.core.storage.sql.S3BinaryManager;
 import org.nuxeo.runtime.api.Framework;
 import org.nuxeo.runtime.test.runner.Features;
@@ -23,7 +24,7 @@ import org.nuxeo.runtime.test.runner.FeaturesRunner;
 import com.google.inject.Inject;
 
 @RunWith(FeaturesRunner.class)
-@Features(CoreFeatureMinioS3BlobStore.class)
+@Features({MinioDockerFeature.class, CoreFeatureMinioS3BlobStore.class})
 public class TestBlobByteRangeManagerS3 {
 
     @Inject
@@ -59,9 +60,6 @@ public class TestBlobByteRangeManagerS3 {
     @Test
     public void testFSBlob() throws Exception {
 
-    	
-    	
-    	
     	Blob blob = new StringBlob("0123456789");
     	blob.setFilename("whatever.txt");
     	
