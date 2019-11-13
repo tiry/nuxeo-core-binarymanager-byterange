@@ -105,6 +105,16 @@
     </dependency>
 
     <dependency>
+      <groupId>com.spotify</groupId>
+      <artifactId>docker-client</artifactId>
+      <version>8.16.0</version>
+      <scope>test</scope>
+      <classifier>shaded</classifier>
+    </dependency>
+
+
+
+    <dependency>
       <groupId>org.nuxeo.ecm.core</groupId>
       <artifactId>nuxeo-core-binarymanager-common</artifactId>
     </dependency>

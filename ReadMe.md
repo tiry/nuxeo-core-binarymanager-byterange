@@ -44,10 +44,26 @@ You first need to deploy the plugin inside your Nuxeo server.
 
 	cp target/nuxeo-core-binarymanager-byterange-X.Y-Z.jar into nxserver/bundles
 
+### Using
+
+The `BlobByteRangeManager` is exposed via a  Nuxeo Runtime service, so it can be accessed via:
+
+    import org.nuxeo.runtime.api.Framework;     
+     
+    Blob byteRangedBlob = Framework.getService(BlobByteRangeManager.class).getBlobWithByteRange(srcBlob, offset, length);
+
+A Helper class is also provided in order to avoid direct dependency on Nuxeo runtime:
+
+
+    import org.nuxeo.ecm.core.blob.BBRHelper;
+     
+    Blob byteRangedBlob = BBRHelper.getService().getBlobWithByteRange(srcBlob, offset, length)
+
 ## WIP
 
  - [x] Initial service
  - [x] S3 and LocalFS implementation
  - [x] S3 unit tests 
+ - [ ] Automate MiniIO deployment and configuration for tests
  - [ ] Make service pluggable to contribue providers from the outside
 
